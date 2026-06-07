@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+venv/
+env/
+.env/
+.venv/
+
+# Dataset (terlalu besar untuk repo)
+datasets/coco8/
+datasets/labeled/images/
+datasets/labeled/labels/
+datasets/*.zip
+
+# Models (download ulang atau train)
+# models/exam_detector.pt   # uncomment jika ingin exclude
+
+# Output & Logs
+output/*.mp4
+output/screenshots/
+logs/*.log
+
+# Training runs (besar)
+training/runs/
+
+# YOLOv8 cache
+runs/
+
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

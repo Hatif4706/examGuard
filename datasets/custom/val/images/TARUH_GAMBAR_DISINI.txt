@@ -1,0 +1,6 @@
+Taruh file gambar (.jpg atau .png) di folder ini.
+File label (.txt) harus diletakkan di folder ../labels/ dengan nama yang sama.
+
+Contoh:
+  images/foto_hp_01.jpg  →  labels/foto_hp_01.txt
+  images/foto_hp_02.jpg  →  labels/foto_hp_02.txt

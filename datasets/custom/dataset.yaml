@@ -1,0 +1,10 @@
+# CV ExamGuard — Custom Dataset
+# Dibuat oleh: add_custom_dataset.py
+
+path: C:\gyzhas\NgodingWIthKangzy\examguard\ExamCheatDetector\datasets\custom
+train: train/images
+val: val/images
+test: test/images
+
+nc: 5
+names: ['person', 'phone', 'laptop', 'book', 'suspicious']

@@ -1,0 +1,13 @@
+# Direktori ini untuk menyimpan model yang sudah ditraining
+# File model akan muncul di sini setelah training:
+# - exam_detector.pt (model custom setelah training)
+#
+# Model pretrained YOLOv8 akan otomatis didownload ke:
+# - ~/.cache/ultralytics/ atau
+# - C:\Users\<user>\.cache\ultralytics\
+
+# Cara menggunakan custom model:
+# Edit config.yaml:
+#   models:
+#     use_custom: true
+#     custom_model: "models/exam_detector.pt"

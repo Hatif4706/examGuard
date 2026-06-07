@@ -1,0 +1,78 @@
+# ================================================================
+# KONFIGURASI CV EXAMGUARD v2.3
+# ================================================================
+
+camera:
+  source: 0
+  width: 1280
+  height: 720
+  fps: 30
+
+models:
+  yolo_model: "yolov8n.pt"
+  custom_model: "models/exam_detector.pt"
+  use_custom: false
+  confidence_threshold: 0.40
+  iou_threshold: 0.45
+  device: "auto"
+
+optimization:
+  process_frame_width: 480
+  process_frame_height: 360
+  skip_frame_interval: 1
+  target_fps: 30
+
+head_pose:
+  yaw_threshold: 20          # ± derajat kiri/kanan
+  pitch_threshold: 22        # derajat ke bawah setelah offset
+  pitch_offset: 8.0          # kalibrasi: +8° agar tidak false positive saat duduk tegak
+  roll_threshold: 20
+  max_faces: 4
+  min_detection_confidence: 0.4
+  min_tracking_confidence: 0.4
+
+behavior:
+  gaze_away_duration: 3.0          # detik menoleh sebelum EXTENDED alert
+  phone_detection_duration: 3.0    # cooldown log HP
+  multiple_person_duration: 2.0
+  head_down_duration: 3.0
+  face_not_detected_duration: 5.0
+
+alerts:
+  audio: true
+  visual: true
+  screenshot: true
+  cooldown:
+    none: 999
+    low: 8
+    medium: 5
+    high: 3
+    critical: 2
+
+dataset:
+  roboflow_api_key: ""
+  synthetic_train: 1000
+  synthetic_val: 250
+  synthetic_test: 125
+
+training:
+  epochs: 80
+  batch_size: 16
+  image_size: 640
+  model: "yolov8n.pt"
+  augment: true
+  patience: 20
+
+logging:
+  save_detection_video: true
+  generate_report: true
+  report_format: "html"
+  output_dir: "output"
+  log_dir: "logs"
+
+display:
+  show_fps: true
+  show_landmarks: false
+  show_angles: true
+  dashboard_width: 340
+  window_title: "CV ExamGuard v2.3"
